@@ -24,7 +24,7 @@ export async function downloadS3folder(prefix : string) {
                 return;
             }
             
-            const finalOutputPath = path.join(__dirname,Key.replace(/\//g, '\\'));
+            const finalOutputPath = path.join(__dirname,Key);
             const outputFile = fs.createWriteStream(finalOutputPath);
             const dirName = path.dirname(finalOutputPath);
             if(!fs.existsSync(dirName)){
@@ -46,11 +46,10 @@ export async function downloadS3folder(prefix : string) {
 }
 
 export async function copyFinalDist(id: string) {
-    const folderPath = path.join(__dirname, `output\\${id}\\dist`);
+    const folderPath = path.join(__dirname, `output/${id}/dist`);
     const allFiles = getAllfiles(folderPath);
 
     allFiles.forEach( file => {
-        file = file.replace(/\\/g, "/")
         uploadFile(`dist/${id}/` + file.slice(folderPath.length + 1), file);
     })
 

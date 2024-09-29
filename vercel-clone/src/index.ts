@@ -28,7 +28,6 @@ app.post("/deploy",async (req,res) => {
 	const files = getAllfiles(path.join(__dirname, `output/${id}`));
 
 	files.forEach(async file => {
-		file = file.replace(/\\/g, "/")
 		await uploadFile(file.slice(__dirname.length + 1) , file);
 		
 	})
