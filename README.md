@@ -1,4 +1,4 @@
 Followed tutorial from: https://www.youtube.com/watch?v=c8_tafixiAs
 
 
-Deployed at vercel.lolice.tech
+[DEPLOYED AT VERCEL.LOLICE.TECH](https://vercel.lolice.tech)
