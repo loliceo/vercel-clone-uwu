@@ -1,3 +1,3 @@
 
 
-[DEPLOYED AT VERCEL.LOLICE.TECH](https://vercel.lolice.tech)
+Deployed at [vercel.lolice.tech](https://vercel.lolice.tech)
